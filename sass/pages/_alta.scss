@@ -1,0 +1,133 @@
+/* ********************************************
+            Alta
+************************************************/
+
+.fondo {
+    background-image: url(/img/backg.png);
+}
+.central {
+    text-align: justify;
+    width: 50%;
+    height: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3em;
+    background-color: rgba(250, 246, 246, 0.9);
+    padding: 5em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 8px 9px 33px 1px rgba(0,0,0,0.78);
+    -webkit-box-shadow: 8px 9px 33px 1px rgba(0,0,0,0.78);
+    -moz-box-shadow: 8px 9px 33px 1px rgba(0,0,0,0.78);
+    overflow-x: visible;
+
+    &__title {
+        padding: 1em;
+        background-color: #F7F7F7;
+        border-style: none;
+        text-align: center;
+        box-shadow: 8px 9px 33px 1px rgba(0,0,0,0.78);
+        -webkit-box-shadow: 8px 9px 33px 1px rgba(0,0,0,0.78);
+        -moz-box-shadow: 8px 9px 33px 1px rgba(0,0,0,0.78);
+        border-radius: 7px;
+        font-variant: small-caps;
+        letter-spacing: 0.5em;
+        font-weight: bold;
+    }
+
+    &__inputs {
+        margin-bottom: 2em;
+        margin-top: 2em;
+    
+    
+    }
+
+    &__category {
+        margin-bottom: 4em;
+        text-align: justify;
+        list-style:  none;
+        }
+        
+    &__category ul {
+        list-style-type: none;
+        }
+    
+    & textarea {
+        resize: none;
+        width: 90%;
+        height: 3em;
+    }
+
+}
+
+
+
+.list-title {
+margin-bottom: 1em;
+}
+
+
+
+
+
+.submits {
+    padding: 1em;
+    margin: 1em;
+    margin-left: 15%;
+    position: relative;
+    z-index: 10;
+    display: block;
+
+    &__slide {
+        font-size: 20px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        padding: 13px 30px 13px;
+        outline: 0;
+        border: 1px solid black;
+        cursor: pointer;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    &__slide i {
+        opacity: 0;
+        font-size: 13px;
+        transition: 0.2s;
+        position: absolute;
+        right: 10px;
+        top: 21px;
+        transition: transform 1;
+    }
+    
+    &__slide div {
+        transition: transform 0.8s;
+    }
+    
+    &__slide:hover div {
+        transform: translateX(-6px);
+    }
+    
+    &__slide::after {
+        content: "";
+        background-color: #ea1d6f;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: 7px;
+        left: 7px;
+    }
+    
+    &__slide:hover i {
+        opacity: 1;
+        transform: translateX(-6px);
+    }
+
+}
+
+
+
+.button {
+    margin: 1em;
+}

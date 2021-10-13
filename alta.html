@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <title>Alta</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/LOGO3.ico">
+
+</head>
+<body>
+
+    <header class="main-header">
+
+        <nav class="nav-bar">
+            <ul class="nav-bar__nav-list">
+                
+                <li class="nav-bar__nav-item">
+                    <a href="index.html" class="nav-bar__nav-link">Inicio</a></li>
+                <li class="nav-bar__nav-item"> 
+                    <a href="alta.html" class="nav-bar__nav-link">Alta</a></li>
+                <li class="nav-bar__nav-item">
+                    <a href="contacto.html" class="nav-bar__nav-link">Contacto</a></li>
+                <li class="nav-bar__nav-item">
+                    <a href="nosotros.html" class="nav-bar__nav-link">Nosotros</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+    
+            <div class="search-bar__logo-container">
+                <a href="index.html"><img src="img/LOGO3 (1).png" alt="logo"></a>
+            </div>
+            
+            <form class="search-bar__form-container">
+                <label for="busqueda" class="search-bar__form-label"></label>
+                <input type="search" class="search-bar__form-search" id="busqueda">
+                <input type="submit" value="Buscar" class="search-bar__form-submit">
+            </form>
+            <div class="search-bar__carrito-container">
+                <img src="img/10532_blue_cart_shopping_icon.png" alt="">
+            </div>
+            <div class="menu-toggle">
+                <label class="menu-toggle__label">
+                    <span class="menu-toggle__pan-arriba"></span>
+                    <span class="menu-toggle__medallon"></span>
+                    <span class="menu-toggle__pan-abajo"></span>
+                </label>
+            </div>
+        
+        </div>
+    </header>
+    <div class="fondo">
+        <form action="alta.php" method="GET" autocomplete="off">
+            
+            <div id="alta-form">
+                
+                <fieldset class="central">
+                    
+                    <legend class="central__title">Alta de Producto</legend>
+                    <div>
+                        <label for="nombre">Nombre: *</label>
+                        <input class="central__inputs" type="text" id="nombre" name="nombre" required autofocus>
+                    </div>
+
+                    <div>
+                        <label for="precio">Precio: *</label>
+                        <input class="central__inputs" type="number" id="precio" name="precio" required min="1" max="99999999">
+                    </div>
+
+                    <div>
+                        <label for="stock">Stock: *</label>
+                        <input class="central__inputs" type="stock" id="stock" name="stock" required min="1" max="99999999">
+                    </div>
+
+                    <div>
+                        <label for="brand">Marca: *</label>
+                        <select class="central__inputs" id="brand" name="brand" required>
+                                <option value="" selected disabled>- Seleccionar -</option>
+                                <optgroup label="Smartphones">
+                                    <option value="2">Apple</option>
+                                    <option value="3">Xiaomi</option>
+                                    <option value="4">Huawei</option>
+                                    <option value="5">Motorola</option>
+                                    <option value="8">Samsung</option>
+                                </optgroup>
+                                <optgroup label="Notebooks">
+                                    <option value="6">HP</option>
+                                    <option value="7">Sony</option>
+                                    <option value="9">LG</option>
+                                    <option value="10">Dell</option>
+                                </optgroup>
+                                <optgroup label="Gadgets">
+                                    <option value="11">Garmin</option>
+                                    <option value="12">Pioneer</option>
+                                    <option value="13">Edifier</option>
+                                    <option value="14">Thonet & Vader</option>
+                                </optgroup>
+                                <optgroup label="Watch">
+                                    <option value="15">Apple</option>
+                                    <option value="16">Samsung</option>
+                                    <option value="17">Xiaomi</option>
+                                    <option value="18">Fitbit</option>
+                                    <option value="19">Garmin</option>
+                                    <option value="20">TomTom</option>
+                                </optgroup>
+                                <option value="9999">Otra</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Subí una imagen del producto: </p>
+                        <input class="central__inputs" type="file" id="picture" name="picture">
+                    </div>
+
+                    <div class="central__category">
+                        <p class="list-title">Categoría: *</p>
+                        <ul>
+                        <li><input type="radio" id="cel" name="cat" value="cel">
+                        <label for="cel">Smartphone</label></li>
+
+                        <li><input type="radio" id="note" name="cat" value="note">
+                        <label for="note">Notebook</label></li>
+
+                        <li><input type="radio" id="gad" name="cat" value="gad">
+                        <label for="gad">Gadget</label></li>
+
+                        <li><input type="radio" id="wat" name="cat" value="wat">
+                        <label for="wat">Watch</label></li>
+
+                        <li><input type="radio" id="other" name="cat" value="other" checked>
+                        <label for="other">Otro</label></li>
+                        </ul>
+                    </div>
+                    <div>   
+                        <label for="details">
+                            <p>Detalles</p>
+                        </label>
+                        
+                        <textarea class= "central__inputs" name="details" id="details"></textarea>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ship" name="ship" value="ship">
+                        <label for="ship">Envío sin cargo</label>
+
+                    </div>
+
+                    <div class= "submits">
+
+                        <button type="submit" class="submits__slide">
+                            <div>
+                                Dar de alta
+                            </div>
+                            <i class="icon-arrow-right"></i>
+                        </button>
+
+                        <button type="reset" class="submits__slide">
+                            <div>Reset</div>
+                            <i class="icon-arrow-right"></i>
+                        </button>
+                    
+                    </div>
+
+                </fieldset>
+
+            </div>
+            
+        </form>
+        <footer>
+            <div class="footer">
+                
+                <div class="footer__social">
+                    <div class="footer__social-container">
+                        <p>Encontranos en nuestras redes:</p>
+                        <a href="http://instagram.com" target="_blank">
+                        <img src="img/ig.png" alt="instagram"></a>
+                        <a href="https://facebook.com" target="_blank"><img src="img/fb.png" alt=""></a>
+                        <a href="https://twitter.com" target="_blank"><img src="img/twity.png" alt=""></a>
+                        <a href="https://snapchat.com" target="_blank"><img src="img/snap.png" alt=""></a>
+                        <a href="https://youtube.com" target="_blank"><img src="img/yutu.png" alt=""></a>
+                        <a href="https://reddit.com" target="_blank"><img src="img/redi.png" alt="">
+                        </a>
+                        <p>Copyright © 2021 Connecticus Inc. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
